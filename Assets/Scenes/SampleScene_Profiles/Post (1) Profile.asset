@@ -173,10 +173,10 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 0
-    value: 0
+    value: -15.9
   tint:
     overrideState: 0
-    value: 0
+    value: -34.6
   colorFilter:
     overrideState: 0
     value: {r: 0.29262766, g: 0, b: 0.745283, a: 1}
@@ -191,10 +191,10 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 0
-    value: 0.88
+    value: 0.57
   contrast:
     overrideState: 1
-    value: 4
+    value: 60
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -224,7 +224,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0.05997001}
+    value: {x: 1, y: 1, z: 1, w: 0.1487931}
   gamma:
     overrideState: 0
     value: {x: 1, y: 1, z: 1, w: 0}
