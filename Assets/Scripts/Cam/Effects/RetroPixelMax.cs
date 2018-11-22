@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Assets.Scripts.Cam.Effects {
-	[ExecuteInEditMode]
+	// [ExecuteInEditMode]
 	[RequireComponent(typeof(UnityEngine.Camera))]
 	[AddComponentMenu("Image Effects/Custom/Retro Pixel Max")]
 	public class RetroPixelMax : MonoBehaviour {
