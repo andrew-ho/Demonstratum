@@ -18,10 +18,11 @@ public class Human : MonoBehaviour
     public float lookSpeed;
     public AnimationCurve lookCurve;
     public float viewDistance;
+    [Range(0.0f, 360.0f)]
     public float viewAngle;
 
     private NavMeshAgent agent;
-    private HumanState state;
+    public HumanState state;
     private Vector3 searchPosition;
     private float waitTimer;
     private float lookTimer;
@@ -51,14 +52,23 @@ public class Human : MonoBehaviour
 
     void Update()
     {
-        patrole();
+        switch(state) {
+            case HumanState.Idle:
+                break;
+            case HumanState.Patrolling:
+                patrole();
+                break;
+            case HumanState.Chasing:
+                break;
+        }
     }
 
     void patrole() {
         if (playerInSight()) {
-            Debug.DrawLine(sight.transform.position,
-                GameManager.instance.player.transform.position, Color.green);
+            state = HumanState.Chasing;
             sight.color = Color.red;
+            // Debug.DrawLine(sight.transform.position,
+            //     GameManager.instance.player.transform.position, Color.green);
         } else {
             Debug.DrawLine(sight.transform.position,
                 GameManager.instance.player.transform.position, Color.red);
